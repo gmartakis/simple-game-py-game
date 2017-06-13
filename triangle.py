@@ -85,7 +85,6 @@ while not done:
                         print("x: " , x_coor)
                         print("y: " , y_coor)
             pygame.display.update()
-        #pygame.display.flip()
             clock.tick(60)
 
 pygame.quit()
