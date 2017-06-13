@@ -75,35 +75,15 @@ while not done:
                 # If the sprite goes off the edge of the screen,
                 # make it move in the opposite direction
 
-                #time_passed = clock.tick(10)
-                #time_passed_seconds = time_passed / 1000.0
-
-                #x_coor += speed_x * time_passed_seconds
-                #y_coor += speed_y * time_passed_seconds
-
-                #x_coor = x_coor-10
-                #y_coor = y_coor+4.52
-                if event.type == pygame.MOUSEBUTTONDOWN:
+               if event.type == pygame.MOUSEBUTTONDOWN:
                    if event.button == 1:
                        x, y = event.pos
-                       #print ("x: "+str(x)+"y"+str(y))
                        if b.collidepoint(x, y):
-                        #print ("x: "+str(x)+"y"+str(y))
-                        #print("clicked")
-                        #ballrect = ballrect.move(speed)
                         x_coor = x_coor-speed_x
                         y_coor = y_coor+speed_y
-                        #time.sleep(00000.1)
                         animate(x_coor,y_coor)
-                        #x_coor = 100 #x_coor-10
-                        #y_coor = 308 #y_coor+4.52
-                        #rect_image.move(x_coor - 520, y_coor+ 235)
                         print("x: " , x_coor)
                         print("y: " , y_coor)
-
-                #rect_change_x +=5
-                #rect_change_y +=5
-
             pygame.display.update()
         #pygame.display.flip()
             clock.tick(60)
